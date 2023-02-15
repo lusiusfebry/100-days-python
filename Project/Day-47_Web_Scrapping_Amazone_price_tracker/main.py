@@ -27,9 +27,9 @@ current_price = float(price+decimal_price)
 
 target_price = 500
 
-message = f"Subject: New Alert from Amazon\n\n{product_title} is now {current_price} \nlink {URL}"
-print(message)
+
 if current_price < target_price:
+    message = f"Subject: New Alert from Amazon\n\n{product_title} is now {current_price} \nlink {URL}"
 
 
     with smtplib.SMTP("smtp.gmail.com") as connection:
